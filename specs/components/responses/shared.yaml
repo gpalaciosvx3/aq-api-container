@@ -1,0 +1,19 @@
+ValidationError:
+  description: "[CORE-001] El cuerpo de la solicitud no es válido"
+  content:
+    application/json:
+      schema:
+        $ref: "../schemas/errors.yaml#/ApiValidationErrorBody"
+      examples:
+        CORE-001:
+          $ref: "../examples/core-errors.yaml#/ValidationError"
+
+InternalError:
+  description: "[CORE-002] Ocurrió un error inesperado"
+  content:
+    application/json:
+      schema:
+        $ref: "../schemas/errors.yaml#/ApiErrorBody"
+      examples:
+        CORE-002:
+          $ref: "../examples/core-errors.yaml#/InternalError"

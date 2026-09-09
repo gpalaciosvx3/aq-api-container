@@ -1,0 +1,12 @@
+node_modules
+dist
+coverage
+test
+.git
+.github
+.husky
+.ai
+*.md
+.env
+.env.*
+!.env.example

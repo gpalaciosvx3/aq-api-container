@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "rootDir": "src",
+    "declarationMap": false,
+    "sourceMap": false
+  },
+  "exclude": ["node_modules", "dist", "test", "coverage", ".husky", "docker"]
+}

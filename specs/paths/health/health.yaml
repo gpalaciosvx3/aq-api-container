@@ -1,0 +1,19 @@
+get:
+  tags:
+    - health
+  summary: Estado del proceso
+  operationId: getHealth
+  responses:
+    "200":
+      description: El proceso responde.
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                $ref: "../../components/schemas/health.yaml#/HealthOutput"
+    "500":
+      $ref: "../../components/responses/shared.yaml#/InternalError"

@@ -1,0 +1,21 @@
+openapi: 3.0.3
+info:
+  title: arq-container-api
+  version: "1.0"
+  description: Arquetipo de API contenerizada — NestJS + Fastify sobre @gpalacios/*
+  license:
+    name: UNLICENSED
+servers:
+  - url: http://localhost:3000
+    description: Local server
+tags:
+  - name: health
+    description: Estado del proceso
+  - name: ping
+    description: Feature de referencia — eco del mensaje recibido
+security: []
+paths:
+  /health:
+    $ref: "./paths/health/health.yaml"
+  /ping:
+    $ref: "./paths/ping/ping.yaml"

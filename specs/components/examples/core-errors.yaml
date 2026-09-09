@@ -1,0 +1,14 @@
+ValidationError:
+  summary: Cuerpo inválido
+  value:
+    code: "CORE-001"
+    description: "El cuerpo de la solicitud no es válido"
+    issues:
+      - path: ["message"]
+        message: "String must contain at least 1 character(s)"
+
+InternalError:
+  summary: Error inesperado
+  value:
+    code: "CORE-002"
+    description: "Ocurrió un error inesperado"

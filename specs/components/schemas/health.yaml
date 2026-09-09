@@ -1,0 +1,16 @@
+HealthOutput:
+  title: Health Output
+  type: object
+  required:
+    - status
+    - uptimeSeconds
+  properties:
+    status:
+      type: string
+      description: Estado reportado por el servicio
+      example: "ok"
+    uptimeSeconds:
+      type: integer
+      format: int32
+      description: Segundos transcurridos desde el arranque del proceso
+      example: 42

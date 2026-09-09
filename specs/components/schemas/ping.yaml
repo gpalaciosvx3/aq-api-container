@@ -1,0 +1,33 @@
+PingRequest:
+  title: Ping Request
+  type: object
+  required:
+    - message
+  properties:
+    message:
+      type: string
+      minLength: 1
+      description: Mensaje que el servicio devuelve como eco
+      example: "hello"
+
+PingOutput:
+  title: Ping Output
+  type: object
+  required:
+    - message
+    - echo
+    - receivedAt
+  properties:
+    message:
+      type: string
+      description: Respuesta fija del servicio
+      example: "pong"
+    echo:
+      type: string
+      description: Eco del mensaje recibido
+      example: "hello"
+    receivedAt:
+      type: string
+      format: date-time
+      description: Momento en que se procesó la solicitud
+      example: "2026-05-27T10:00:00.000Z"

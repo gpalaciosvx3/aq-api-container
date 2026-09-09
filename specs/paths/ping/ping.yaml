@@ -1,0 +1,27 @@
+post:
+  tags:
+    - ping
+  summary: Responde pong con el mensaje recibido
+  operationId: postPing
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../components/schemas/ping.yaml#/PingRequest"
+  responses:
+    "200":
+      description: Mensaje procesado.
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                $ref: "../../components/schemas/ping.yaml#/PingOutput"
+    "400":
+      $ref: "../../components/responses/shared.yaml#/ValidationError"
+    "500":
+      $ref: "../../components/responses/shared.yaml#/InternalError"

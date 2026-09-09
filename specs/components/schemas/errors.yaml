@@ -1,0 +1,38 @@
+ApiErrorBody:
+  title: Api Error Body
+  type: object
+  required:
+    - code
+    - description
+  properties:
+    code:
+      type: string
+      description: Código del diccionario de errores (prefijo CORE- o el del proyecto)
+      example: "CORE-002"
+    description:
+      type: string
+      description: Descripción legible del error
+      example: "Ocurrió un error inesperado"
+
+ApiValidationErrorBody:
+  title: Api Validation Error Body
+  allOf:
+    - $ref: "#/ApiErrorBody"
+    - type: object
+      required:
+        - issues
+      properties:
+        issues:
+          type: array
+          description: Detalle por campo reportado por el esquema de validación
+          items:
+            type: object
+            properties:
+              path:
+                type: array
+                items:
+                  type: string
+                example: ["message"]
+              message:
+                type: string
+                example: "String must contain at least 1 character(s)"
