@@ -202,7 +202,7 @@ specs/
 ```
 
 ```bash
-npm run spec:lint    # valida la especificación
+npm run lint         # eslint sobre el código + redocly sobre la especificación
 npm run spec         # empaqueta todo en local-docs/openapi.yaml
 ```
 
@@ -235,6 +235,7 @@ npm install
 
 npm run start:dev     # Nest CLI en watch — recompila y reinicia solo
 npm run typecheck     # tsc --noEmit sobre src/ y test/
+npm run lint          # eslint + redocly
 npm run arch:check    # Fronteras de arquitectura
 npm test              # Tests BDD con cobertura
 npm run format        # Formatear código

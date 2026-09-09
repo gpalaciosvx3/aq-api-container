@@ -1,6 +1,7 @@
-import { ArgumentsHost, Catch, ExceptionFilter, HttpException, HttpStatus } from '@nestjs/common';
-import { FastifyReply } from 'fastify';
 import { CustomException, ErrorDictionary, type ApiErrorBody } from '@gpalacios/core';
+import { Catch, HttpException, HttpStatus } from '@nestjs/common';
+import type { ArgumentsHost, ExceptionFilter } from '@nestjs/common';
+import type { FastifyReply } from 'fastify';
 
 @Catch()
 export class HttpExceptionFilter implements ExceptionFilter {

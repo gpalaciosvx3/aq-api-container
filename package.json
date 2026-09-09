@@ -13,7 +13,9 @@
     "test": "jest --coverage",
     "arch:check": "depcruise --config .dependency-cruiser.js src",
     "spec": "redocly bundle specs/openapi.yaml -o local-docs/openapi.yaml",
-    "spec:lint": "redocly lint specs/openapi.yaml",
+    "lint": "npm run lint:code && npm run lint:spec",
+    "lint:code": "eslint .",
+    "lint:spec": "redocly lint specs/openapi.yaml",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "prepare": "husky"
   },
@@ -35,6 +37,9 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^22.0.0",
     "dependency-cruiser": "^18.1.0",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-import-x": "^4.17.1",
     "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jest-cucumber": "^4.4.0",
@@ -42,7 +47,8 @@
     "prettier": "^3.8.3",
     "ts-jest": "^29.2.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.70.0"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": "prettier --write"

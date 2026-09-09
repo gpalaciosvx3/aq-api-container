@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { HealthConstants } from '../constants/health.constants';
-import { HealthOutput } from '../types/health-output.types';
+import type { HealthOutput } from '../types/health-output.types';
 
 @Injectable()
 export class HealthService {

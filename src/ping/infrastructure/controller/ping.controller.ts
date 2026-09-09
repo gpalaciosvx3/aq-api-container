@@ -1,7 +1,7 @@
-import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 import { HandleExecution } from '@gpalacios/core';
+import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 import { PingUseCase } from '../../application/use-cases/ping.usecase';
-import { PingOutput } from '../../domain/types/ping-output.types';
+import type { PingOutput } from '../../domain/types/ping-output.types';
 
 @Controller('ping')
 export class PingController {

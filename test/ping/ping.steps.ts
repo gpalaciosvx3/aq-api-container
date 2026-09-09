@@ -1,13 +1,14 @@
-import { defineFeature, loadFeature } from 'jest-cucumber';
-import { Test } from '@nestjs/testing';
-import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
 import { ValidationException } from '@gpalacios/core';
+import { FastifyAdapter } from '@nestjs/platform-fastify';
+import { Test } from '@nestjs/testing';
+import { defineFeature, loadFeature } from 'jest-cucumber';
 import { HttpExceptionFilter } from '../../src/common/filters/http-exception.filter';
 import { ResponseInterceptor } from '../../src/common/interceptors/response.interceptor';
-import { PingModule } from '../../src/ping/infrastructure/bootstrap/ping.module';
-import { PingService } from '../../src/ping/domain/service/ping.service';
 import { PingUseCase } from '../../src/ping/application/use-cases/ping.usecase';
-import { PingOutput } from '../../src/ping/domain/types/ping-output.types';
+import { PingService } from '../../src/ping/domain/service/ping.service';
+import { PingModule } from '../../src/ping/infrastructure/bootstrap/ping.module';
+import type { PingOutput } from '../../src/ping/domain/types/ping-output.types';
+import type { NestFastifyApplication } from '@nestjs/platform-fastify';
 
 const feature = loadFeature('./test/ping/features/ping.feature');
 

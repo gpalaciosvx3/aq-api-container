@@ -1,9 +1,9 @@
-import { Injectable } from '@nestjs/common';
-import { ZodIssue } from 'zod';
 import { ErrorDictionary, ValidationException, getLogger } from '@gpalacios/core';
+import { Injectable } from '@nestjs/common';
 import { PingService } from '../../domain/service/ping.service';
 import { PingRequestSchema } from '../dtos/ping.request.dto';
-import { PingOutput } from '../../domain/types/ping-output.types';
+import type { PingOutput } from '../../domain/types/ping-output.types';
+import type { ZodIssue } from 'zod';
 
 @Injectable()
 export class PingUseCase {
