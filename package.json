@@ -1,5 +1,5 @@
 {
-  "name": "arq-container-api",
+  "name": "aq-api-container",
   "version": "1.0.0",
   "description": "Arquetipo de API contenerizada — NestJS + Fastify + Clean Architecture sobre @gpalacios/*",
   "private": true,

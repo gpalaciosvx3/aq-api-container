@@ -1,4 +1,4 @@
-# arq-container-api
+# aq-api-container
 
 Arquetipo de API contenerizada NestJS + Fastify (TypeScript). Punto de partida para proyectos que se despliegan como contenedor —dentro o fuera de AWS— con Clean Architecture y pruebas BDD. Incluye una feature de referencia `ping/pong` y un módulo `health` completamente implementados.
 
@@ -45,7 +45,7 @@ npm i @gpalacios/aws @aws-sdk/client-dynamodb @aws-sdk/lib-dynamodb   # solo el 
 ## Estructura del proyecto
 
 ```
-arq-container-api/
+aq-api-container/
   docker/                          # Dockerfile + docker-compose
   specs/                           # Documentación OpenAPI modular
   src/
@@ -274,8 +274,8 @@ Los tests usan **jest-cucumber**: cada feature tiene un archivo `.feature` (Gher
 La imagen es multi-stage, corre como usuario `node`, sin dev-dependencies, con `HEALTHCHECK` apuntando a `/health`. El apagado limpio ante `SIGTERM` lo maneja `app.enableShutdownHooks()`.
 
 ```bash
-docker build -f docker/Dockerfile -t arq-container-api .
-docker run -p 3000:3000 arq-container-api
+docker build -f docker/Dockerfile -t aq-api-container .
+docker run -p 3000:3000 aq-api-container
 ```
 
 El contexto de build es la raíz del repo, por eso el `.dockerignore` vive ahí: Docker solo lo lee desde la raíz del contexto.

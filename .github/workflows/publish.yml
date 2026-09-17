@@ -17,10 +17,10 @@ concurrency:
 jobs:
   validate:
     if: github.event_name == 'pull_request'
-    uses: gpalaciosvx3/gpalacios-pipelines/.github/workflows/node-validate.yml@v1
+    uses: gpalaciosvx3/pt-ci-pipelines/.github/workflows/node-validate.yml@v1
     with:
       node-version: '22'
 
   publish:
     if: github.event_name == 'push'
-    uses: gpalaciosvx3/gpalacios-pipelines/.github/workflows/aws-ecr-publish.yml@v1
+    uses: gpalaciosvx3/pt-ci-pipelines/.github/workflows/aws-ecr-publish.yml@v1
